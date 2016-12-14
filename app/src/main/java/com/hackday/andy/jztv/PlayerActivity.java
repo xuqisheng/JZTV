@@ -24,8 +24,7 @@ public class PlayerActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        String httpLiveUrl = "http://hls4.l.cztv.com/channels/lantian/channel08/" +
-                "360p.m3u8?k=8f774534a3a770091c717f68cde7e1b0&t=1481681346";
+        String httpLiveUrl = "http://hls4.l.cztv.com/channels/lantian/channel08/360p.m3u8?k=8f774534a3a770091c717f68cde7e1b0&t=1481681346";
         videoView.setVideoURI(Uri.parse(httpLiveUrl));
         videoView.setMediaController(new MediaController(this));
         videoView.requestFocus();
