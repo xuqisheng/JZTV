@@ -162,8 +162,9 @@ public class MainFragment extends BrowseFragment {
             }
         });
 
-        setOnItemViewClickedListener(new ItemViewClickedListener());
         // 电影选中时
+        setOnItemViewClickedListener(new ItemViewClickedListener());
+        // 电影获取焦点时
         setOnItemViewSelectedListener(new ItemViewSelectedListener());
     }
 
@@ -199,6 +200,7 @@ public class MainFragment extends BrowseFragment {
 
     /*
     * 当我选中我们的movie item时，我们去更新我们browser fragment的bg
+    * 过一秒钟bg此才会update 提升了用户体验
     * */
     private final class ItemViewSelectedListener implements OnItemViewSelectedListener {
         @Override

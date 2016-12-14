@@ -127,14 +127,23 @@ public class VideoDetailsFragment extends DetailsFragment {
         setAdapter(mAdapter);
     }
 
+    /*
+    *
+    *
+    * */
     private void setupDetailsOverviewRow() {
         Log.d(TAG, "doInBackground: " + mSelectedMovie.toString());
+
         final DetailsOverviewRow row = new DetailsOverviewRow(mSelectedMovie);
+
         row.setImageDrawable(getResources().getDrawable(R.drawable.default_background));
+
         int width = Utils.convertDpToPixel(getActivity()
                 .getApplicationContext(), DETAIL_THUMB_WIDTH);
+
         int height = Utils.convertDpToPixel(getActivity()
                 .getApplicationContext(), DETAIL_THUMB_HEIGHT);
+
         Glide.with(getActivity())
                 .load(mSelectedMovie.getCardImageUrl())
                 .centerCrop()
@@ -160,6 +169,10 @@ public class VideoDetailsFragment extends DetailsFragment {
         mAdapter.add(row);
     }
 
+    /*
+    *
+    *  detailsPresenter 设置点击监听
+    * */
     private void setupDetailsOverviewRowPresenter() {
         // Set detail background and style.
         DetailsOverviewRowPresenter detailsPresenter =
@@ -174,6 +187,8 @@ public class VideoDetailsFragment extends DetailsFragment {
         detailsPresenter.setOnActionClickedListener(new OnActionClickedListener() {
             @Override
             public void onActionClicked(Action action) {
+
+                // 打开PlaybackOverlayActivity 播放视频
                 if (action.getId() == ACTION_WATCH_TRAILER) {
                     Intent intent = new Intent(getActivity(), PlaybackOverlayActivity.class);
                     intent.putExtra(DetailsActivity.MOVIE, mSelectedMovie);
