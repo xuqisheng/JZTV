@@ -57,8 +57,8 @@ public class MainFragment extends BrowseFragment {
     private static final int BACKGROUND_UPDATE_DELAY = 300;
     private static final int GRID_ITEM_WIDTH = 200;
     private static final int GRID_ITEM_HEIGHT = 200;
-    private static final int NUM_ROWS = 2;
-    private static final int NUM_COLS = 2;
+    private static final int NUM_ROWS = 1;
+    private static final int NUM_COLS = 1;
 
     private final Handler mHandler = new Handler();
     private ArrayObjectAdapter mRowsAdapter;

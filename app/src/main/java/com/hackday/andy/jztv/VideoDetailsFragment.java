@@ -190,7 +190,7 @@ public class VideoDetailsFragment extends DetailsFragment {
 
                 // 打开PlaybackOverlayActivity 播放视频
                 if (action.getId() == ACTION_WATCH_TRAILER) {
-                    Intent intent = new Intent(getActivity(), PlaybackOverlayActivity.class);
+                    Intent intent = new Intent(getActivity(), PlayerActivity.class);
                     intent.putExtra(DetailsActivity.MOVIE, mSelectedMovie);
                     startActivity(intent);
                 } else {
@@ -208,7 +208,7 @@ public class VideoDetailsFragment extends DetailsFragment {
         Collections.shuffle(list);
         ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
         for (int j = 0; j < NUM_COLS; j++) {
-            listRowAdapter.add(list.get(j % 5));
+            listRowAdapter.add(list.get(j % 1));
         }
 
             HeaderItem header = new HeaderItem(0, subcategories[0]);

@@ -214,6 +214,7 @@ public class PlaybackOverlayFragment extends android.support.v17.leanback.app.Pl
         Movie movie = mItems.get(mCurrentItem);
         MediaMetadataRetriever mmr = new MediaMetadataRetriever();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            Log.i("andy----", movie.getVideoUrl());
             mmr.setDataSource(movie.getVideoUrl(), new HashMap<String, String>());
         } else {
             mmr.setDataSource(movie.getVideoUrl());
