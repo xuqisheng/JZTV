@@ -190,7 +190,7 @@ public class VideoDetailsFragment extends DetailsFragment {
 
                 // 打开PlaybackOverlayActivity 播放视频
                 if (action.getId() == ACTION_WATCH_TRAILER) {
-                    Intent intent = new Intent(getActivity(), PlaybackOverlayActivity.class);
+                    Intent intent = new Intent(getActivity(), PlayerActivity.class);
                     intent.putExtra(DetailsActivity.MOVIE, mSelectedMovie);
                     startActivity(intent);
                 } else {

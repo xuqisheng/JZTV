@@ -9,6 +9,8 @@
         android:name="android.hardware.touchscreen"
         android:required="false" />
     <uses-feature
+        android:name="android.hardware.type.television" android:required="true" />
+    <uses-feature
         android:name="android.software.leanback"
         android:required="true" />
 
